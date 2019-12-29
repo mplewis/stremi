@@ -31,5 +31,9 @@ module Stremi
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # We use Webpacker, not Sprockets
+    config.assets.compile = false
+    config.assets.enabled = false
   end
 end
