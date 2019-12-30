@@ -1,7 +1,14 @@
 <template>
-  <div id="app">
-    <p>{{ message }}</p>
-  </div>
+  <b-container>
+    <b-row>
+      <b-col>
+        <h1>{{ kind }}</h1>
+      </b-col>
+      <b-col cols="2">
+        <p>{{ text }}</p>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script lang="ts">
@@ -17,17 +24,12 @@ const msg = {
 };
 
 export default {
-  data: function() {
-    return {
-      message: `${msg.kind}: ${msg.text}`
-    };
-  }
+  data: () => msg
 };
 </script>
 
-<style scoped>
+<style scoped lang="stylus">
 p {
-  font-size: 2em;
-  text-align: center;
+  color: blue;
 }
 </style>
