@@ -1,21 +1,23 @@
 <template>
-  <b-container>
+  <b-container fluid>
     <b-row>
       <b-col>
-        <p>nav</p>
-        <ul>
-          <li><router-link to="/foo">Foo</router-link></li>
-          <li><router-link to="/bar">Bar</router-link></li>
-        </ul>
+        <Navbar />
       </b-col>
     </b-row>
     <router-view />
   </b-container>
 </template>
 
-<script lang="ts"></script>
+<script lang="ts">
+import Navbar from "./navbar";
 
-<style scoped lang="stylus">
-p
-  color: red
+export default {
+  components: { Navbar }
+};
+</script>
+
+<style lang="stylus">
+*
+  font-family "Helvetica Neue", "Helvetica", "Arial", sans-serif
 </style>
