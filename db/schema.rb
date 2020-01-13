@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_13_003243) do
+ActiveRecord::Schema.define(version: 2020_01_13_004521) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "confirmation_codes", force: :cascade do |t|
+    t.bigint "subscriber_id", null: false
+    t.text "code", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["subscriber_id"], name: "index_confirmation_codes_on_subscriber_id"
+  end
 
   create_table "subscribers", force: :cascade do |t|
     t.text "email", null: false
@@ -23,4 +31,5 @@ ActiveRecord::Schema.define(version: 2020_01_13_003243) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "confirmation_codes", "subscribers"
 end
