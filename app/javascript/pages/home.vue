@@ -27,7 +27,8 @@
 
     <Heading>Do I need snow tires if it doesn't snow near me?</Heading>
     <Txt>
-      Yes. Snow tires are also known as <em>winter tires</em> because they
+      Yes. Snow tires are also known as
+      <em>winter tires</em> because they
       outperform all-season tires in cold weather. This applies to all driving,
       including dry, rainy, and snowy conditions.
     </Txt>
@@ -64,19 +65,20 @@
     <Heading>Do I need studded snow tires?</Heading>
     <Txt>
       <em>Studded</em> snow tires have metal studs in them to improve grip in
-      certain circumstances <em>studless</em> snow tires do not have metal
+      certain circumstances
+      <em>studless</em> snow tires do not have metal
       studs. Generally, studded tires perform better on ice near 32° F, and
-      studlesss tires perform better in most other conditions (<a
+      studlesss tires perform better in most other conditions (
+      <a
         href="https://www.outsideonline.com/2359001/studded-tires-winter-car-prep"
-        >source</a
-      >).
+      >source</a>).
     </Txt>
   </span>
 </template>
 
 <script lang="js">
-import Heading from './blocks/heading'
-import Txt from "./blocks/txt";
+import Heading from '../blocks/heading'
+import Txt from "../blocks/txt";
 
 export default {
   components: { Heading, Txt }

@@ -3,9 +3,9 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter)
 
-import Home from './home'
-import Foo from './foo'
-import Bar from './bar'
+import Home from './pages/home'
+import Foo from './pages/foo'
+import Bar from './pages/bar'
 
 const routes = [
   { path: "/", component: Home },
