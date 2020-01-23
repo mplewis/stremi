@@ -19,6 +19,13 @@ export default {
 </script>
 
 <style lang="stylus">
-*
-  font-family "Helvetica Neue", "Helvetica", "Arial", sans-serif
+* {
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+main {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>

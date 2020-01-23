@@ -6,14 +6,14 @@ Vue.use(VueRouter)
 // @ts-ignore
 import Home from './pages/home'
 // @ts-ignore
-import Foo from './pages/foo'
+import FAQ from './pages/faq'
 // @ts-ignore
-import Bar from './pages/bar'
+import Unsub from './pages/unsub'
 
 const routes = [
   { path: "/", component: Home },
-  { path: "/foo", component: Foo },
-  { path: "/bar", component: Bar }
+  { path: "/faq", component: FAQ },
+  { path: "/unsub", component: Unsub },
 ]
 
 export default new VueRouter({ routes })

@@ -1,6 +1,6 @@
 <template>
   <b-row>
-    <b-col class="ml-auto mr-auto content">
+    <b-col class="ml-auto mr-auto">
       <details>
         <summary>
           <slot name="question" />
@@ -12,10 +12,6 @@
 </template>
 
 <style lang="stylus" scoped>
-.content {
-  max-width: 600px;
-}
-
 details {
   padding-top: 3px;
   padding-bottom: 3px;
