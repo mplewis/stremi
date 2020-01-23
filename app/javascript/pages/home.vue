@@ -11,7 +11,8 @@
       <txt>Enter your zip code and we'll email you when it's time to put on snow tires:</txt>
       <b-row class="my-2">
         <b-col>
-          <b-form-input v-model="zip" placeholder="90210" />
+          <b-form-input v-model="zip" placeholder="90210" :state="validZip" />
+          <b-form-invalid-feedback>Please enter a valid 5-digit US zip code</b-form-invalid-feedback>
         </b-col>
       </b-row>
       <b-row class="my-2">
@@ -39,10 +40,21 @@ import Heading from "../blocks/heading";
 // @ts-ignore
 import Txt from "../blocks/txt";
 
+function validateZip(zip: string) {
+  return Boolean(zip.match(/^\d\d\d\d\d$/));
+}
+
 export default {
   components: { Heading, Txt },
   data() {
     return { email: "", zip: "" };
+  },
+  computed: {
+    validZip() {
+      if (this.zip.length < 5) return null;
+      if (validateZip(this.zip)) return null;
+      return false;
+    }
   }
 };
 </script>
