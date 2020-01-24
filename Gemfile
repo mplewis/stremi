@@ -32,6 +32,8 @@ group :development, :test do
   gem 'hashie'
   gem 'rubocop'
   gem 'awesome_print'
+  gem 'guard'
+  gem 'guard-rspec'
 end
 
 group :development do
