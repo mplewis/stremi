@@ -10,6 +10,7 @@
 </template>
 
 <script lang="ts">
+// @ts-ignore
 import Navbar from "./navbar";
 
 export default {
